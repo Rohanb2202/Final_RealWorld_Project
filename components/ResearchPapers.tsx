@@ -7,6 +7,7 @@ interface DiseasePageProps {
 }
 
 const DiseasePage: React.FC<DiseasePageProps> = ({ diseaseId }) => {
+  // eslint-disable-next-line
   const [papers] = useState<Paper[]>([]);
   // Remove the fetchPapers useEffect completely
 

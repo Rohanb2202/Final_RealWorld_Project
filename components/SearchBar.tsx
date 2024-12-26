@@ -30,11 +30,17 @@ export default function SearchBar({ onSelect }: SearchBarProps) {
         throw new Error('Failed to fetch diseases')
       }
       const data = await response.json()
-      const diseases = data.response.docs.map((doc: any) => ({
+      // const diseases = data.response.docs.map((doc: any) => ({
+      //   id: doc.id,
+      //   label: doc.label,
+      //   description: doc.description ? doc.description[0] : undefined
+      // }))
+
+      const diseases = data.response.docs.map((doc: { id: string; label: string; description?: string[] }) => ({
         id: doc.id,
         label: doc.label,
-        description: doc.description ? doc.description[0] : undefined
-      }))
+        description: doc.description ? doc.description[0] : undefined,
+      }));
       
       if (diseases.length === 0) {
         setError('Please provide an actual disease name.')
@@ -50,6 +56,7 @@ export default function SearchBar({ onSelect }: SearchBarProps) {
   }, [])
 
   const {
+  
     isOpen,
     getMenuProps,
     getInputProps,
