@@ -21,7 +21,7 @@ const DiseasePage: React.FC<DiseasePageProps> = ({ diseaseId }) => {
       <h2 className="text-2xl font-semibold mb-4">Latest Research Papers</h2>
       <div className="bg-white rounded-lg shadow-md p-6">
         <p className="text-gray-600">
-          Research papers integration coming soon. This feature will allow you to explore the latest research related to {diseaseId}.
+          Research papers integration coming soon. This feature will allow you to explore the latest research related to the specified diseases.
         </p>
       </div>
     </motion.div>

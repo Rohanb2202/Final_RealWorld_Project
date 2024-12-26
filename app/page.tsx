@@ -1,3 +1,4 @@
+
 'use client'
 
 import { useState } from 'react'
@@ -11,7 +12,7 @@ export default function Home() {
   const [selectedDisease, setSelectedDisease] = useState<Disease | null>(null)
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-100 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
+    <><main className="min-h-screen bg-gradient-to-b from-blue-100 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
       <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -37,10 +38,30 @@ export default function Home() {
                 <ResearchPapers diseaseId={selectedDisease.id} />
               </motion.div>
             )}
+
+
           </AnimatePresence>
         </motion.div>
       </div>
-    </main>
+    </main><footer className="bg-blue-900 text-white/80 py-6 px-4">
+        <div className="max-w-7xl mx-auto text-center space-y-2">
+          <p>© 2024 Disease Ontology Explorer | All rights reserved | Rohan B</p>
+          
+        </div>
+      </footer></>
   )
 }
+
+
+
+
+
+{/* <footer className="bg-indigo-900 text-white/80 py-6 px-4">
+        <div className="max-w-7xl mx-auto text-center space-y-2">
+          <p>© 2024 Disease Explorer | All rights reserved | Yashwant</p>
+          <p className="text-sm text-white/60">
+            Powered by advanced medical ontologies and cutting-edge web technologies.
+          </p>
+        </div>
+      </footer> */}
 
