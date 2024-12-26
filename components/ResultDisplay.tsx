@@ -182,4 +182,3 @@ export default function ResultsDisplay({ disease }: ResultsDisplayProps) {
     </motion.div>
   )
 }
-

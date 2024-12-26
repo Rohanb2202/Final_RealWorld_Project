@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Paper } from '../app/types/paper';
 
+
+// eslint-disable-next-line
 interface DiseasePageProps {
   diseaseId: string;
 }
 
-const DiseasePage: React.FC<DiseasePageProps> = ({ diseaseId }) => {
+const DiseasePage: React.FC<DiseasePageProps> = ({ }) => {
   // eslint-disable-next-line
   const [papers] = useState<Paper[]>([]);
   // Remove the fetchPapers useEffect completely
